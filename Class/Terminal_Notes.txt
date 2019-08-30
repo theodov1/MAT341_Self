@@ -1,0 +1,3 @@
+notes on terminal commands
+
+ls: lists every files/folder in directory
