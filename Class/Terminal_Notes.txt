@@ -1,3 +1,15 @@
-notes on terminal commands
+Notes on Terminal Commands
 
-ls: lists every files/folder in directory
+pwd: lists (in sequence) folders that you're currently in, starting from your root directory
+cd..:moves up a directory
+cd [folder name]: change directory to a folder named [folder name]
+cd ~: Goes to your root folder on your computer, typically the directory containing      your user profile
+ls: lists all files/folders in directory
+ls ~a: lists all files/folders/hidden files in a directory
+clear: clears the terminal window
+history: shows all the current history of commands typed
+mkdir [name]: makes a folder of the name [name]
+rm [name]: removes a file of the name [name]
+rm -r [folder_name]: removes a folder of the name [folder_name]
+cp [file1] [file2]: copies [file1] to a new file called [file2]
+cp -r [folder1] [folder2]: copies an entire folder of name [folder1] to [folder2]
