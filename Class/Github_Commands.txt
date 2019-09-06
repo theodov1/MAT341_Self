@@ -1,3 +1,7 @@
-1. git add [file name/folder name]
-2. git commit -m "notes"
-3. git push
+Notes on Github Commands
+
+1. git add [file name/folder name] - sets up documents/files to be sent to GitHub
+2. git commit -m "notes" - further prepares documents and associates them with a 
+			   description of what is going to be sent.
+3. git push - sends the files/documents to GitHub.  
+4. git clone [hyperlink] - clones repositories to your computer. 
