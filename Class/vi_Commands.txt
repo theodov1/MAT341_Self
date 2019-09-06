@@ -1,0 +1,11 @@
+Notes on text editor vi Commands
+
+vi [file name]: typing vi and a file name with no such file in the folder will 
+		create that file.  Typing vi and a file name that exists will open
+		the file.
+i: insert - to start editing the file (side note: you cannot navigate with your 
+	    mouse)
+esc: esc key to stop editing
+:w - "w" stands for write.  This saves the file to your personal computer.
+:q - "q" stands for quit.  This takes you out of the document and vi editor.  
+:# - brings you to a specific line number
