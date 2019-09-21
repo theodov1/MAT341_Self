@@ -1,0 +1,63 @@
+function val = square_Root_Sequence(m,n)
+
+% This function calculates the nested square root sequence tn from HW2 and
+% is used to help determine the limit of tn as n gets large for m.  The 
+% inputs for the function are m and n.  m is the value to be plugged into 
+% the sequence and n is the to determine the nth term in the sequence.
+% This function will return the value of the sequence for m at term tn.  
+
+%This while loop runs while n is odd.  
+while mod(n,2)==1
+    
+    %initialize val2 to calculate the term in the sequence
+    val2 = sqrt(m);
+    
+    %calculate t_1 term
+    if n == 1
+        val = sqrt(m);
+    end
+
+    %for loop to calculate for odd values of n>1. Runs until l=n finding 
+    %the nth term.  Initialize value of l which is used to determine if 
+    %you're adding or subtracting the previous value under the square root.  
+    for l=2:1:n
+
+        %if l is even, you add the value and set val equal to new computed
+        %val2.
+        if mod(l,2)==0
+            val2 = sqrt(m + val2);
+            val=val2;
+        end
+
+        %if l is odd, you subtract the value and set val equal to new computed
+        %val2.
+        if mod(l,2)==1
+            val2 = sqrt(m - val2);
+            val = val2;
+        end
+    end
+    
+    %forces the while loop to end
+    break
+end
+
+%n is even
+while mod(n,2)==0
+    
+    val2 = 0;
+
+    for l=1:1:n
+        if mod(l,2)==1
+            val2 = sqrt(m + val2);
+            val=val2;
+        end
+
+        if mod(l,2)==0
+            val2 = sqrt(m - val2);
+            val = val2;
+        end
+         
+    end
+    break
+end
+
