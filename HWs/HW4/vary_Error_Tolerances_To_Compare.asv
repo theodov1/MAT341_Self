@@ -1,0 +1,39 @@
+function vary_Error_Tolerances_To_Compare()
+
+%This function tests and plots our functions for the Golden Search
+%Algorithm and the Successive Parabolic Interpolation Algorithm for 
+%different error tolerances.  
+
+%initializes vector of different error tolerances.  
+errTolVec=[1e-1 1e-2 1e-3 1e-4 1e-5 1e-6 1e-7 1e-8 1e-9 1e-10 1e-11 1e-12];
+
+for i=1:length(errTolVec) %increasing by increments of 1 from 1 to the length of the vector.  
+   
+   %solves for gold
+   N_GS(i)=golden_Search(errTolVec(i)); 
+   N_SPI(i)=successive_Parabolic_Intepolation(errTolVec(i));
+    
+end
+
+hold on 
+figure(1)
+
+semilogx(errTolVec, N_GS,'b','LineWidth',5);
+xlabel('Error Tolerance');
+ylabel('Number of Iterations');
+leg = legend('Golden Search');
+hold off
+
+
+figure(2)
+hold on
+loglog(errTolVec, N_SPI, 'r','LineWidth',5);
+xlabel('Error Tolerance');
+ylabel('Number of Iterations');
+leg = legend('Succ. Par. Interp.');
+
+hold off
+
+
+
+
